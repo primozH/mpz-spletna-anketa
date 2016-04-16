@@ -23,9 +23,13 @@
           ki si ga bomo skupaj ogledali.</p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="form">
       <div class="col-xs-12 text-center"  id="movies">
-        <form action="mailto:primoz.hrovat.96@gmail.com" role="form" class="form-inline">
+        <form role="form" class="form-inline">
+          <div class="form-group">
+            <label for="usr">Ime: </label>
+            <input type="text" class="form-control" id="ime">
+          </div>
           <div class="form-group">
             <label for="sel1">1. izbira:</label>
             <select name="1.izbira" class="form-control" id="prvi">
@@ -86,25 +90,26 @@
               <option value="Fight Club">Fight Club</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-default" value="Potrdi!">Potrdi!</button>
+          <input class="btn btn-default" id="ok" value="potrdi" type="button">
         </form>
       </div>
+      <div id="msg"></div>
     </div>
     <!-- Zlistani vsi filmi - slika + povezava na imdb -->
     <div class="row">
       <div class="col-xs-6 col-md-4 col-lg-3">
         <a href="http://www.imdb.com/title/tt3460252/" data-toggle="tooltip"
         title="The Hateful Eight"><img class="img-responsive"
-          src="http://ia.media-imdb.com/images/M/MV5BMjA1MTc1NTg5NV5BMl5BanBnXkFtZTgwOTM2MDEzNzE@._V1__SX701_SY650_.jpg"/></a>
+          src="pictures/hatefulEight.jpg"/></a>
       </div>
       <div class="col-xs-6 col-md-4 col-lg-3">
         <a href="http://www.imdb.com/title/tt1431045/"><img class="img-responsive"
-          src="http://ia.media-imdb.com/images/M/MV5BMjQyODg5Njc4N15BMl5BanBnXkFtZTgwMzExMjE3NzE@._V1__SX1473_SY687_.jpg"
+          src="pictures/deadpool.jpg"
           title="Deadpool"/></a>
       </div>
       <div class="col-xs-6 col-md-4 col-lg-3">
         <a href="http://www.imdb.com/title/tt0361748/"><img class="img-responsive"
-          src="http://ia.media-imdb.com/images/M/MV5BMjIzMDI4MTUzOV5BMl5BanBnXkFtZTcwNDY3NjA3Mg@@._V1__SX1473_SY687_.jpg"
+          src="pictures/inglorious.jpg"
           title="Inglorious Bastards"/></a>
       </div>
       <div class="col-xs-6 col-md-4 col-lg-3">
