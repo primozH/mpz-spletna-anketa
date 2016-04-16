@@ -25,8 +25,9 @@ $(document).ready(function(){
         proti: proti
       }
       var json = JSON.stringify(link);
+      console.log(json);
       request = new XMLHttpRequest();
-      request.open("POST", "/read_store.php", true);
+      request.open("POST", "mpz-smihel.netau.net/read_store.php", true);
       request.setRequestHeader("Content-type", "application/json;charset=UTF-8");
       request.send(json);
       request.onreadystatechange = function(){
