@@ -8,9 +8,10 @@
   $drugi = $data['drugi'];
   $tretji = $data['tretji'];
   $proti = $data['proti'];
-  $datum = $date['datum'];
+  $date = new DateTime();
+  $date = $date->format("y:m:d h:i:s");
 
-  $txt = $datum.";".$ime.";".$prvi.";".$drugi.";".$tretji.";".$proti;
+  $txt = $date.";".$ime.";".$prvi.";".$drugi.";".$tretji.";".$proti;
   $file = file_put_contents('rezultati.csv', $txt.PHP_EOL, FILE_APPEND);
   fclose($file);
 

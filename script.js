@@ -17,7 +17,6 @@ $(document).ready(function(){
     }
     else{
       var link = {
-        datum: new Date(),
         ime: ime,
         prvi: prvi,
         drugi: drugi,
@@ -27,7 +26,7 @@ $(document).ready(function(){
       var json = JSON.stringify(link);
       console.log(json);
       var request = new XMLHttpRequest();
-      request.open("POST", "../read_store.php", false);
+      request.open("POST", "read_store.php", false);
       request.setRequestHeader("Content-type", "application/json;charset=UTF-8");
       request.send(json);
       $('#movies').empty();
