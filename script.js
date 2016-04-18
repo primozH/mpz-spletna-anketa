@@ -26,17 +26,10 @@ $(document).ready(function(){
       }
       var json = JSON.stringify(link);
       console.log(json);
-      request = new XMLHttpRequest();
-      request.open("POST", "mpz-smihel.netau.net/read_store.php", true);
+      var request = new XMLHttpRequest();
+      request.open("POST", "../read_store.php", false);
       request.setRequestHeader("Content-type", "application/json;charset=UTF-8");
       request.send(json);
-      request.onreadystatechange = function(){
-        if(request.readyState === 4 && request.status === 200){
-          jsondata = JSON.parse(request.responseText);
-          console.log(jsondata);
-        }
-      }
-      console.log(link);
       $('#movies').empty();
       $('#movies').html("<p>Hvala za tvoj glas!</p>");
     }

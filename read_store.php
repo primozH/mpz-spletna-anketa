@@ -1,15 +1,17 @@
 <?php
-  header('Content-type: application/json');
-  $json = $_POST['ime'];
+  header("Access-Control_Allow-Origin: *");
+  header("Content-Type: aplication/json; charset=UTF-8");
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, true);
+  $ime = $data['ime'];
+  $prvi = $data['prvi'];
+  $drugi = $data['drugi'];
+  $tretji = $data['tretji'];
+  $proti = $data['proti'];
+  $datum = $date['datum'];
 
-$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-$txt = $json;
-fwrite($myfile, $txt);
-$txt = "Jane Doe\n";
-fwrite($myfile, $txt);
-fclose($myfile);
+  $txt = $datum.";".$ime.";".$prvi.";".$drugi.";".$tretji.";".$proti;
+  $file = file_put_contents('rezultati.csv', $txt.PHP_EOL, FILE_APPEND);
+  fclose($file);
 
-  $json_decode = json_decode($json, true);
-  $json_encode = json_encode($json_decode);
-  echo $json_encode;
 ?>
