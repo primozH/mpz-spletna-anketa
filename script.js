@@ -33,12 +33,4 @@ $(document).ready(function(){
       $('#movies').html("<p>Hvala za tvoj glas!</p>");
     }
   });
-
-  var heights = $(".img").map(function() {
-        return $(this).height();
-    }).get(),
-
-    maxHeight = Math.max.apply(null, heights);
-
-    $(".img").height(maxHeight);
 });
